@@ -47,14 +47,14 @@ public class Tabelas {
     public String nivel_Imc(){
                 String result = "";
                 int nivelIMC[][] = {
-                    {18, 5, 2},
-                    {19, 7, 1},
-                    {25, 12, 3}
+                    {18, 5, 2, 1},
+                    {19, 7, 1, 0},
+                    {25, 12, 3, 2}
                 };
                 
                 for(int i = 0; i < 3 ; i++){
                     result += "<br>";
-                    for(int j = 0; j < 3 ; j++){
+                    for(int j = 0; j < 4 ; j++){
                           result += nivelIMC[i][j] + "    ";
                     }
                 }

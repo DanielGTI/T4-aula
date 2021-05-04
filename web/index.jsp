@@ -1,5 +1,7 @@
 <%@page import="Suporte.Tabelas" %>
 <%@page import="Suporte.Paciente" %>
+<%@page import="java.util.List" %>
+<%@page import="java.util.ArrayList" %>
 
 <!DOCTYPE html>
 <html>
@@ -48,16 +50,30 @@
 
         <%
             
-                Paciente p = new Paciente();
+                //Paciente p = new Paciente("Daniel", "123.456.789-12", 30);
                 
-                p.setNome("Daniel");
-                p.setIdade(30);
-                p.setCpf("123.456.789-12");
+                List<Paciente> p = new ArrayList<Paciente>();
                 
-                out.println("Nome = " + p.getNome() + "<br>");
-                out.println(p.getCpf());
+                p.add(new Paciente("Daniel", "123.456.789-12", 30) );
+                p.add(new Paciente("João", "456.456.789-12", 40) );
+                p.add(new Paciente("Maria", "789.456.789-12", 50) );
+                p.add(new Paciente("Robson", "321.456.789-12", 20) );
+                
+                
+                for(Paciente valor : p){
+                    out.print("----------------------<br>");
+                    out.print("Nome: " + valor.getNome() + "<br>");
+                    out.print(valor.getCpf());
+                    out.print("Idade: " + valor.getIdade() + "<br>");                    
+                }
+                
+                
+                
+                //out.println("Nome = " + p.getNome() + "<br>");
+                //out.println(p.getCpf());
                 
         %>
+        
         <br>
     </body>
 </html>

@@ -13,9 +13,14 @@ public class Paciente {
     private String sexo;
     private String tipo_sangue;
 
+    public Paciente(String nome, String cpf, int idade) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.idade = idade;
+    }
+
     
-    public Paciente() {
-    }    
+      
     
     
     //  MÉTODO GET
